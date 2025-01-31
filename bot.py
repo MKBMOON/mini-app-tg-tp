@@ -1,7 +1,6 @@
 import asyncio
 import logging
 import json
-import os
 
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
@@ -11,7 +10,7 @@ from aiogram.enums.parse_mode import ParseMode
 
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(os.getenv("TOKEN"))
+bot = Bot(token="7813747320:AAG7DPyKDs7fivysMVxcMo4TX7TNu1lnR20")
 dp = Dispatcher()
 
 
