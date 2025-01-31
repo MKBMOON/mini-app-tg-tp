@@ -1,10 +1,12 @@
-import requests
+from flask import Flask, render_template
 
-TOKEN = '7813747320:AAG7DPyKDs7fivysMVxcMo4TX7TNu1lnR20'
-CHAT_ID = '356523865'
-URL = 'https://amvera-mkbmoon-run-takeoffmai-miniapp'
+app = Flask(__name__, template_folder='.')
 
-message = f'Нажмите на ссылку, чтобы открыть Mini App: {URL}'
-url = f'https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}'
 
-requests.get(url)
+@app.route("/")
+def web():
+    return render_template('index.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port='80')  
