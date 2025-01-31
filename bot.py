@@ -17,7 +17,7 @@ dp = Dispatcher()
 
 @dp.message(CommandStart())
 async def start(message: types.Message):
-    webAppInfo = types.WebAppInfo(url="https://amvera-mkbmoon-run-takeoffmai-miniapp")
+    webAppInfo = types.WebAppInfo(url="https://site-mkbmoon.amvera.io/")
     builder = ReplyKeyboardBuilder()
     builder.add(types.KeyboardButton(text='Отправить данные', web_app=webAppInfo))
 
